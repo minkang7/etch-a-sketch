@@ -4,10 +4,10 @@
 
 unsigned long targetTime=0;
 const unsigned long interval=100; //TODO: How fast should we read
-int x = 100;
-int y = 100;
-int prev_x = 100;
-int prev_y = 100;
+int x = 1;
+int y = 1;
+int prev_x = 1;
+int prev_y = 1;
 void setup(){
   pinMode(SENSORPINA, INPUT);
   pinMode(SENSORPINB, INPUT);
@@ -20,7 +20,6 @@ void loop(){
     targetTime= millis()+interval;
     //Add other sensor read outs
     x = analogRead(SENSORPINA);
-    Serial.println(x);
     y = analogRead(SENSORPINB);
     if (x != prev_x || y != prev_y) {
       // convert values into a string, combine them into a string that can be understood by server.js
