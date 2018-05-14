@@ -20,6 +20,7 @@ void loop(){
     targetTime= millis()+interval;
     //Add other sensor read outs
     x = analogRead(SENSORPINA);
+    Serial.println(x);
     y = analogRead(SENSORPINB);
     if (x != prev_x || y != prev_y) {
       // convert values into a string, combine them into a string that can be understood by server.js
